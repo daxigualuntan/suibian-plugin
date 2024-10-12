@@ -1,0 +1,122 @@
+{
+    "app": [
+        {
+            "id": "zz",
+            "name": "张嘴",
+            "event": "message",
+            "priority": 114514,
+            "rule": [
+                {
+                    "index": "5-1",
+                    "reg": "^张嘴.*$",
+                    "isOnline": true,
+                    "ml": "张嘴|张嘴xx",
+                    "fnc": "zz",
+                    "des": "张嘴有急事\n更新日志：2023/3/2 加了几张图"
+                },
+                {
+                    "index": "5-2",
+                    "reg": "^看看批*$",
+                    "isOnline": true,
+                    "ml": "看看批",
+                    "fnc": "kkp",
+                    "des": "看看批"
+                }
+            ]
+        },
+        {
+            "id": "st",
+            "name": "来点色图",
+            "event": "message",
+            "priority": 114514,
+            "rule": [
+                {
+                    "index": "6-1",
+                    "reg": "^来点色图*$",
+                    "isOnline": true,
+                    "ml": "来点色图",
+                    "fnc": "ldst",
+                    "des": "来点色图"
+                }
+            ]
+        },
+        {
+            "id": "sh",
+            "name": "说",
+            "event": "message",
+            "priority": 114514,
+            "rule": [
+                {
+                    "index": "7-1",
+                    "reg": "^说.*$",
+                    "hide": false,
+                    "isOnline": true,
+                    "ml": "说xx",
+                    "fnc": "say",
+                    "des": "文字转语音功能"
+                }
+            ]
+        },
+        {
+            "id": "emby",
+            "name": "emby",
+            "event": "message",
+            "priority": 114514,
+            "rule": [
+                {
+                    "index": "8-1",
+                    "reg": "^#注册$",
+                    "hide": false,
+                    "isOnline": true,
+                    "ml": "#注册",
+                    "fnc": "embyReg",
+                    "des": "emby自助注册"
+                },
+                {
+                    "index": "8-2",
+                    "reg": "^#清理$",
+                    "hide": false,
+                    "isOnline": true,
+                    "ml": "#清理",
+                    "fnc": "embyDeleteUserWithoutPassword",
+                    "des": "删除注册24小时未设置密码的账号"
+                },
+                {
+                    "index": "8-3",
+                    "reg": "^#盲盒$",
+                    "hide": false,
+                    "isOnline": true,
+                    "ml": "#盲盒",
+                    "fnc": "sjtj",
+                    "des": "随机推荐emby里的电影"
+                },
+                {
+                    "index": "8-4",
+                    "reg": "^#库存$",
+                    "hide": false,
+                    "isOnline": true,
+                    "ml": "#库存",
+                    "fnc": "getEmbyInfo",
+                    "des": "获取emby媒体库消息"
+                }
+            ]
+        },
+        {
+            "id": "",
+            "name": "",
+            "event": "message",
+            "priority": 114514,
+            "rule": [
+                {
+                    "index": "",
+                    "reg": "",
+                    "hide": true,
+                    "isOnline": false,
+                    "ml": "#demo",
+                    "fnc": "",
+                    "des": ""
+                }
+            ]
+        }
+    ]
+}

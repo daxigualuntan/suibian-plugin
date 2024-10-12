@@ -1,0 +1,16 @@
+{
+    "getMp3Api": [
+        {
+            "name": "有道API",
+            "url": "http://tts.youdao.com/fanyivoice?word=",
+            "url_hz": "&le=zh&keyfrom=speaker-target",
+            "default":true
+        },
+        {
+            "name": "StoreAPI",
+            "url": "https://apis.jxcxin.cn/api/yuyin?text=",
+            "url_hz": "",
+            "default":false
+        }
+    ]
+}
