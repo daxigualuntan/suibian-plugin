@@ -40,11 +40,6 @@ embyData: #emby
   recallTimer: 30000 #撤回时间 单位：ms
 
 VPNdata: #vpn
-  url: https://gpukevzrsc.eastasia.cloudapp.azure.com/search?token=ed40378457e81f7ff919cbcf3fceec5c #vpn订阅地址
+  url: https://xxx.xxx.xxx.xxx #vpn订阅地址
   recallTimer: 20000 #撤回时间 单位：ms
   yqlink: https://edu.citbook.me/auth/register?code=IUeujLi6
-
-srdhData: #骚扰电话查询
-  url: https://tenapi.cn/v2/nuisance?tel= #API接口
-  isSr: ./plugins/suibian-plugin/res/img/生气.png
-  notSr: ./plugins/suibian-plugin/res/img/开心.png
