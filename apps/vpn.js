@@ -21,7 +21,7 @@ export class VPN extends plugin {
 
             const VPNdata = await readYAML(`./plugins/suibian-plugin/config/config.yaml`, "utf-8")
 
-            let msg = [`订阅链接（本人自费购买流量有限,勿下载大型文件）：\r\n\r\n${VPNdata.VPNdata.url}\r\n\r\n以下提供几个常用网址：`, segment.image(`./plugins/suibian-plugin/res/img/wz.png`), `方便的话可点击以下邀请链接进行注册${VPNdata.VPNdata.yqlink}`]
+            let msg = [`${VPNdata.VPNdata.url}\r\n\r\n以下提供几个常用网址：`, segment.image(`./plugins/suibian-plugin/res/img/wz.png`), `方便的话可点击以下邀请链接进行注册${VPNdata.VPNdata.yqlink}`]
 
             let resMsg = await e.reply(msg, true)
             return Chehui(resMsg, e, VPNdata.VPNdata.recallTimer)
