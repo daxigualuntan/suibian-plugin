@@ -1,6 +1,86 @@
 {
     "app": [
         {
+            "id": "xiezhen",
+            "name": "写真",
+            "event": "message",
+            "priority": 114514,
+            "rule": [
+                {
+                    "index": "1-1",
+                    "reg": "^#写真$",
+                    "isOnline": true,
+                    "ml": "#写真",
+                    "fnc": "getMl",
+                    "des": "展示写真列表"
+                },
+                {
+                    "index": "1-2",
+                    "reg": "^#看.*$",
+                    "isOnline": true,
+                    "ml": "#看+序号",
+                    "fnc": "getRandomXz",
+                    "des": "获取指定序号的随机写真"
+                }
+            ]
+        },
+        {
+            "id": "bind",
+            "name": "写真",
+            "event": "message",
+            "priority": 1,
+            "rule": [
+                {
+                    "index": "2-1",
+                    "reg": "^#dsadfgsadfsadfasdfsadfcvcvcx验车.*$",
+                    "isOnline": true,
+                    "ml": "#验车",
+                    "fnc": "bindYc",
+                    "des": "阻止验车"
+                },
+                {
+                    "index": "2-2",
+                    "reg": "^戒(🦌|鹿)$",
+                    "isOnline": true,
+                    "ml": "戒(🦌|鹿)",
+                    "fnc": "bindJl",
+                    "des": "阻止戒撸"
+                }
+            ]
+        },
+        {
+            "id": "tz",
+            "name": "梯子",
+            "event": "message",
+            "priority": 1,
+            "rule": [
+                {
+                    "index": "3-1",
+                    "reg": "^#梯子$",
+                    "isOnline": true,
+                    "ml": "#梯子",
+                    "fnc": "getVPN",
+                    "des": "梯子"
+                }
+            ]
+        },
+        {
+            "id": "cx",
+            "name": "查询",
+            "event": "message",
+            "priority": 1,
+            "rule": [
+                {
+                    "index": "4-1",
+                    "reg": "^骚扰电话查询.*$",
+                    "isOnline": false,
+                    "ml": "骚扰电话查询+号码",
+                    "fnc": "queryTel",
+                    "des": "骚扰电话查询"
+                }
+            ]
+        },
+        {
             "id": "zz",
             "name": "张嘴",
             "event": "message",
@@ -13,47 +93,6 @@
                     "ml": "张嘴|张嘴xx",
                     "fnc": "zz",
                     "des": "张嘴有急事\n更新日志：2023/3/2 加了几张图"
-                },
-                {
-                    "index": "5-2",
-                    "reg": "^看看批*$",
-                    "isOnline": true,
-                    "ml": "看看批",
-                    "fnc": "kkp",
-                    "des": "看看批"
-                }
-            ]
-        },
-        {
-            "id": "st",
-            "name": "来点色图",
-            "event": "message",
-            "priority": 114514,
-            "rule": [
-                {
-                    "index": "6-1",
-                    "reg": "^来点色图*$",
-                    "isOnline": true,
-                    "ml": "来点色图",
-                    "fnc": "ldst",
-                    "des": "来点色图"
-                }
-            ]
-        },
-        {
-            "id": "sh",
-            "name": "说",
-            "event": "message",
-            "priority": 114514,
-            "rule": [
-                {
-                    "index": "7-1",
-                    "reg": "^说.*$",
-                    "hide": false,
-                    "isOnline": true,
-                    "ml": "说xx",
-                    "fnc": "say",
-                    "des": "文字转语音功能"
                 }
             ]
         },
@@ -83,7 +122,7 @@
                 },
                 {
                     "index": "8-3",
-                    "reg": "^#盲盒$",
+                    "reg": "^#盲盒guyighjsdjhklfjknbzdjlnkjknxczjkvnb$",
                     "hide": false,
                     "isOnline": true,
                     "ml": "#盲盒",

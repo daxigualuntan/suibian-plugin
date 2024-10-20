@@ -1,0 +1,50 @@
+appData: #软件
+  dir: D:\a影视\APP #软件目录
+  isCheHui: 1 #是否撤回
+  timer: 60000 #撤回时间 单位：ms
+
+xieZhenData: #写真
+  dir: E:\影视\写真 #写真目录
+  isCheHui: 1 #是否撤回
+  timer: 60000 #撤回时间 单位：ms
+  recallReplyTimer: 110000 #命令执行消息反馈撤回时间 单位：ms
+  recallAtTimer: 1000
+  counts: 10 #设置输出的图片数
+
+dingData: #盯
+  dir: D:\a影视\盯 #盯目录
+  isCheHui: 1 #是否撤回
+  replyImg: ./plugins/suibian-plugin/res/img/MIAB-043.png #./plugins/suibian-plugin/res/img/田所浩二.gif
+  todayRecomand: 正在发烧中
+  recallVtimer: 110000 #视频撤回时间 单位：ms
+  recallItimer: 60000 #图片撤回时间 单位：ms
+  recallReplyTimer: 30000 #命令执行消息反馈撤回时间 单位：ms
+
+zzData:
+  dir: D:\a影视\张嘴
+  isCheHui: 1
+  recallVtimer: 110000
+  recallItimer: 60000
+
+mhData: #盲盒
+  dir: D:\a影视\随机车牌
+  isCheHui: 1
+  replyMsg: 已抽取到盲盒，正在搬运图片中~~~如长时间未回复则是被风控拦截了
+  timer: 90000
+  recallReplyTimer: 30000
+
+embyData: #emby
+  embyServerUrl: http://127.0.0.1:8096 #emby接口地址
+  apiKey: 7634c6456d4a48479ff64014a5826b9f #emby的api key
+  deleteTimer: 1 #自定义注册无密码删除时间 单位：h
+  recallTimer: 30000 #撤回时间 单位：ms
+
+VPNdata: #vpn
+  url: https://gpukevzrsc.eastasia.cloudapp.azure.com/search?token=ed40378457e81f7ff919cbcf3fceec5c #vpn订阅地址
+  recallTimer: 20000 #撤回时间 单位：ms
+  yqlink: https://edu.citbook.me/auth/register?code=IUeujLi6
+
+srdhData: #骚扰电话查询
+  url: https://tenapi.cn/v2/nuisance?tel= #API接口
+  isSr: ./plugins/suibian-plugin/res/img/生气.png
+  notSr: ./plugins/suibian-plugin/res/img/开心.png

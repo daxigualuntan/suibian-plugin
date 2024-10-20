@@ -1,0 +1,127 @@
+[
+  {
+    Name: '1677533860',
+    ServerId: 'fbb73e372be540df8b1d92b60f60916e',
+    Prefix: '#',
+    DateCreated: '2024-10-10T15:09:48.1565169Z',
+    Id: 'abdb4f366b74477d960ce02a8c3f3aaf',
+    HasPassword: false,
+    HasConfiguredPassword: false,
+    HasConfiguredEasyPassword: false
+  },
+  {
+    Name: '1763265348',
+    ServerId: 'fbb73e372be540df8b1d92b60f60916e',
+    Prefix: '#',
+    DateCreated: '2024-10-10T15:43:37.5158723Z',
+    Id: '98f8b383108f44788d19ba2ffc8ab0bb',
+    HasPassword: false,
+    HasConfiguredPassword: false,
+    HasConfiguredEasyPassword: false
+  }
+]
+
+{
+  appData: { dir: 'D:\\\\a影视\\\\APP', isCheHui: 1, timer: 60 },
+  xieZhenData: { dir: 'E:\\\\影视\\\\写真', isCheHui: 1, timer: 60 },
+  dingData: { dir: 'D:\\\\a影视\\\\盯', isCheHui: 1, Vtimer: 60, Itimer: 30 }
+}
+
+
+  self_id: 2621181607,
+  user_id: 1044910888,
+  time: 1728803423,
+  message_id: 511825191,
+  real_id: 511825191,
+  message_seq: 511825191,
+  message_type: 'group',
+  sender: {
+    user_id: 1044910888,
+    nickname: '挽风听雨眠',
+    card: '挽风听雨眠',
+    role: 'owner',
+    title: ''
+  },
+  sub_type: 'normal',
+  message: [ { text: '#盲盒', type: 'text' } ],
+  message_format: 'array',
+  post_type: 'message',
+  group_id: 796522070,
+  raw: '{"self_id":2621181607,"user_id":1044910888,"time":1728803423,"message_id":511825191,"real_id":511825191,"message_seq":511825191,"message_type":"group","sender":{"user_id":1044910888,"nickname":"挽风听雨眠","card":"","role":"owner","title":""},"raw_message":"#盲盒","font":14,"sub_type":"normal","message":[{"type":"text","data":{"text":"#盲盒"}}],"message_format":"array","post_type":"message","group_id":796522070}',
+  bot: {
+    adapter: OneBotv11Adapter {
+      id: 'QQ',
+      name: 'OneBotv11',
+      path: 'OneBotv11',
+      echo: [Object],
+      timeout: 60000
+    },
+    sendApi: [Function: sendApi],
+    stat: {
+      start_time: 1728803418,
+      stat: {},
+      lost_pkt_cnt: [Getter],
+      lost_times: [Getter],
+      recv_msg_cnt: [Getter],
+      recv_pkt_cnt: [Getter],
+      sent_msg_cnt: [Getter],
+      sent_pkt_cnt: [Getter]
+    },
+    model: 'TRSS Yunzai ',
+    info: { user_id: 2621181607, nickname: '可儿' },
+    uin: [Getter],
+    nickname: [Getter],
+    avatar: [Getter],
+    setProfile: [Function: setProfile],
+    setNickname: [Function: setNickname],
+    setAvatar: [Function: setAvatar],
+    pickFriend: [Function: pickFriend],
+    pickUser: [Getter],
+    getFriendArray: [Function: getFriendArray],
+    getFriendList: [Function: getFriendList],
+    getFriendMap: [Function: getFriendMap],
+    fl: Map(0) {},
+    pickMember: [Function: pickMember],
+    pickGroup: [Function: pickGroup],
+    getGroupArray: [Function: getGroupArray],
+    getGroupList: [Function: getGroupList],
+    getGroupMap: [Function: getGroupMap],
+    getGroupMemberMap: [Function: getGroupMemberMap],
+    gl: Map(0) {},
+    gml: Map(0) {},
+    request_list: [],
+    getSystemMsg: [Function: getSystemMsg],
+    setFriendAddRequest: [Function: setFriendAddRequest],
+    setGroupAddRequest: [Function: setGroupAddRequest],
+    getCookies: [Function: getCookies],
+    getCsrfToken: [Function: getCsrfToken],
+    guild_info: null,
+    clients: undefined,
+    version: {
+      app_name: 'LLOneBot',
+      protocol_version: 'v11',
+      app_version: '4.0.2',
+      id: 'QQ',
+      name: 'OneBotv11',
+      version: [Getter]
+    }
+  },
+  group_name: undefined,
+  adapter_id: 'QQ',
+  adapter_name: 'OneBotv11',
+  msg: '#盲盒',
+  logText: '\x1B[36m[796522070, 挽风听雨眠(1044910888)]\x1B[39m\x1B[31m[#盲盒]\x1B[39m',
+  isGroup: true,
+  recall: [Function: bound recallMsg],
+  isMaster: true,
+  reply: [AsyncFunction (anonymous)],
+  runtime: Runtime {
+    e: [Circular *1],
+    _mysInfo: {},
+    handler: {
+      has: [Function: has],
+      call: [AsyncFunction: call],
+      callAll: [AsyncFunction: callAll]
+    }
+  },
+  logFnc: '\x1B[34m[emby(sjtj)]\x1B[39m'

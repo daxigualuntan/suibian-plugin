@@ -1,63 +1,59 @@
 import plugin from '../../../lib/plugins/plugin.js'
-import { segment } from 'oicq'
-import fs from 'fs'
-import { checkOnline, returnErr } from '../tools/check.js'
+import { checkOnline, onlyGroup, returnErr, getTypeAndRecall } from '../tools/check.js'
 import { Chehui } from '../tools/dealMsg.js';
-import appList from '../config/appList.json' assert { type: 'json' };
-import chcd from '../config/chcd.json' assert { type: 'json' }
+import { queryList } from '../tools/query.js';
+import { readYAML } from '../tools/yaml.js'
 
-let thisApp = appList.app.find(array => array.id === `zz`)
+const mlData = await readYAML(`./plugins/suibian-plugin/config/zhiling.yaml`, "utf-8")
+const app = mlData.zhangzui
+console.log(app);
+
+const data = await readYAML(`./plugins/suibian-plugin/config/config.yaml`, "utf-8")
 
 export class ZhangZui extends plugin {
     constructor() {
-        super(thisApp)
+        super(app)
     }
-    // 张嘴有急事
+    // 张嘴有急事 0
     async zz(e) {
         try {
-            let check_online = await checkOnline(thisApp, `5-1`)
-            if (!check_online.online) throw {
-                msg: check_online.msg,
-                type: check_online.type
-            }
+            await onlyGroup(e)
+            await checkOnline(app, app.rule[0].reg)  // 检查指令是否上线 
+
+            let resMsg
 
             // directory path
-            const dir = './plugins/suibian-plugin/res/zz';
-            let gifList = []
+            const dir = data.zzData.dir;
 
-            // list all files in the directory
-            fs.readdir(dir, async (err, files) => {
-                if (err) {
-                    throw err;
-                }
+            let pvList = []  // 媒体文件列表
+            let sjIndex  // 随机索引
+            let msg = []
+            let chehuisj    // 控制撤回时间
 
-                files.forEach(file => {
-                    gifList.push(file)
-                })
-                // console.log(gifList);
-                let msg = segment.image(`${dir}/${gifList[Math.floor(Math.random() * gifList.length)]}`)
-                let resMsg = await e.reply(msg, true)
-                // if (!resMsg) resMsg = await e.reply(`图片发送失败，可能被QQ风控`)
-                logger.info(resMsg.message_id)
-                return await Chehui(resMsg, e, chcd.zhangzui)
+            // 读取文件
+            const fatherDir = await queryList(dir)
+            fatherDir.forEach(item => {
+                pvList.push(item)
             })
+
+            sjIndex = Math.floor(Math.random() * pvList.length)
+
+            const getTypeAndRecallData = await getTypeAndRecall(dir,pvList, sjIndex, data.zzData.recallItimer, data.zzData.recallVtimer)
+            // console.log(getTypeAndRecallData);
+
+            msg.push(getTypeAndRecallData.msg)
+            chehuisj = getTypeAndRecallData.recallTime
+
+            resMsg = await e.reply(msg)
+
+            // 判断是否发送成功
+            let errJudge = 'error' in resMsg
+
+            if (errJudge) throw ({ img:`./plugins/suibian-plugin/res/img/略略略.gif`,msg: `Man! What can I say?  【${pvList[sjIndex]}】  out!`, type: `QQ风控` })
+
+            return await Chehui(resMsg, e, chehuisj)
         } catch (err) {
             returnErr(e, err)
         }
     }
-
-    // kkp
-    async kkp(e) {
-        try {
-            let check_online = await checkOnline(thisApp, `5-2`)
-            if (!check_online.online) throw {
-                msg: check_online.msg,
-                type: check_online.type
-            }
-            return e.reply(`看你妈，下头男！`,true)
-        } catch (err) {
-            returnErr(e, err)
-        }
-    }
-
 }

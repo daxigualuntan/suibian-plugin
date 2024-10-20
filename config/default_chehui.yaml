@@ -1,0 +1,4 @@
+#默认的撤回时间 单位：ms
+recallImg: 60000
+recallVideo: 110000
+recallOther: 20000

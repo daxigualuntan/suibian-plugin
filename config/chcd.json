@@ -1,6 +1,6 @@
 {
     "pixiv":60000,
-    "zhangzui":30000,
+    "zhangzui":15000,
     "todayav":60000,
     "zhiling":120000,
     "scl":60000,
@@ -8,6 +8,9 @@
     "caidan_video":300000,
     "sls":90000,
     "embyzc":60000,
-    "embytj":10000,
-    "embykc":60000
+    "embytj":20000,
+    "embykc":60000,
+    "ding_video":120000,
+    "ding_img":20000,
+    "sixty":60000
 }
